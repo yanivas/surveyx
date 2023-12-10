@@ -6,7 +6,7 @@ export const SURVEY_LIST = [
         "set": 1,
         "title": "Survey 1",
         "description": "Survey on Cross-Chain Decentralized Exchange Experience",
-        "reward":"25 TXDC",
+        "reward":"2.5 TXDC",
         "balance":"",
         "questions": [
             {

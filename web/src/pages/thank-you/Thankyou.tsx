@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Thankyou.scss"
+import { Button } from '@mui/material'
+import abi from '../../constants/Survey'
+import { ethers } from 'ethers'
 const Thankyou = () => {
     return (
 
@@ -20,9 +23,18 @@ const Thankyou = () => {
                     Thank you for completing your Survey
                 </h1>
 
-                <Link to={'/surveys'} className="btn btn--blue bt-xl book-session">
-                    Go back to All Surveys
+                <Link to={'/'} className="btn btn--blue bt-xl book-session">
+                    Go back to Home
                 </Link> 
+                <Button onClick={async () => {
+                    const signer = await new ethers.BrowserProvider(window.ethereum).getSigner();
+                    const contract = new ethers.Contract("0x8b67753427613DedA7F5e57c356c28c153b26E5b", abi, signer);
+                    
+                    const response = await contract.fillSurvey(1, Math.floor(Date.now() / 1000) , true);
+                    console.log(response);
+                }} className="btn btn--blue bt-xl book-session">
+                    Redeem Rewards
+                </Button> 
             </div>
         </div>
     )

@@ -80,7 +80,7 @@ const ConnectAccount = (props: any) => {
                 </div>
 
                 <div className='wrapper tw-flex tw-justify-center tw-flex-col tw-items-center tw-gap-10 tw-p-4'>
-                    <p className='tw-text-2xl tw-font-bold tw-text-secondary tw-italic tw-text-center'>Connect with your Account to get started with the ....</p>
+                    <p className='tw-text-2xl tw-font-bold tw-text-secondary tw-italic tw-text-center'>Connect with your Account to explore the world of rewards by taking online surveys</p>
                     <div className='tw-flex tw-justify-center tw-flex-col tw-items-center'>
                         <button onClick={reqEthAccount} className='tw-flex tw-items-center tw-text-lg btn btn--blue'> <img className='tw-w-10 tw-mr-2' src='/metamask.png'></img> Connect Your Account</button>
                         {/* <p className='tw-text-xl tw-font-semibold tw-my-4' >Your wallet address is - {WA}</p> */}
