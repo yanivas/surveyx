@@ -2,9 +2,9 @@ Welcome to the SurveyX
 
 The project is divided into three parts
 
-(a) SurveyX Backend
-(b) SurveyX Web Interface
-(c) SurveyX Contracts
+(a) SurveyX Backend<br>
+(b) SurveyX Web Interface<br>
+(c) SurveyX Contracts<br>
 
 # SurveyX Backend
 
