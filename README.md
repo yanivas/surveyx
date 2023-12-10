@@ -81,7 +81,16 @@ The `web` folder has the following structure:
   - **pages:** Individual pages representing different sections of the web interface.
   - **styles:** Stylesheets and styling-related files.
 
+# SurveyX Smart Contracts
 
+It has two main contracts
+1. Survey creation and responding payout functions
+2. Anon Aadhar verfication smart contract
+
+We were able to utilise only one smart contract actively in the functionality of the web application which has the following three major functions:
+1. Create a survey and define a budget for each survey along with number of respondents
+2. Fill a survey and call payable function to redeem the rewards earned by responses
+3. Get survey details where you get pending budget and number of responses
 
 
 
