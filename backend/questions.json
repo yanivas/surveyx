@@ -1,0 +1,308 @@
+[
+    {
+        "set": 1,
+        "title": "Survey 1",
+        "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
+        "questions": [
+            {
+                "id": 1,
+                "question": "What is your preferred method of communication?",
+                "type": "radio",
+                "options": [
+                    {
+                        "option_id": 1,
+                        "value": "a",
+                        "name": "Email"
+                    },
+                    {
+                        "option_id": 2,
+                        "value": "b",
+                        "name": "Phone"
+                    },
+                    {
+                        "option_id": 3,
+                        "value": "c",
+                        "name": "Chat"
+                    },
+                    {
+                        "option_id": 4,
+                        "value": "d",
+                        "name": "In-person"
+                    }
+                ],
+                "script": "if (!['a', 'b', 'c', 'd'].includes(userValue)) {console.log('Please select a valid option (a, b, c, or d).');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 2,
+                "question": "On a scale of 1 to 5, how satisfied are you with our customer support?",
+                "type": "text",
+                "script": "if (isNaN(userValue) || userValue < 1 || userValue > 5) {console.log('Please enter a valid number between 1 and 5.');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 3,
+                "question": "Have you used our product in the last month?",
+                "type": "text",
+                "script": "if (userValue.toLowerCase() !== 'yes' && userValue.toLowerCase() !== 'no') {console.log('Please enter either \"Yes\" or \"No\".');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 4,
+                "question": "Select your country from the list.",
+                "type": "dropdown",
+                "options": [
+                    {
+                        "option_id": 1,
+                        "value": "Select",
+                        "name": "Select"
+                    },
+                    {
+                        "option_id": 2,
+                        "value": "USA",
+                        "name": "United States"
+                    },
+                    {
+                        "option_id": 3,
+                        "value": "CAN",
+                        "name": "Canada"
+                    },
+                    {
+                        "option_id": 4,
+                        "value": "UK",
+                        "name": "United Kingdom"
+                    }
+                ],
+                "script": "if (userValue === 'Select') {console.log('Please select a valid country.');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 5,
+                "question": "What improvements would you suggest for our website?",
+                "type": "text",
+                "script": "if (userValue.trim() === '') {console.log('Please provide your suggestions for website improvements.');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 6,
+                "question": "Do you agree with the statement: \"Our pricing is competitive\"?",
+                "type": "radio",
+                "options": [
+                    {
+                        "option_id": 1,
+                        "value": "agree",
+                        "name": "Agree"
+                    },
+                    {
+                        "option_id": 2,
+                        "value": "disagree",
+                        "name": "Disagree"
+                    }
+                ],
+                "script": "if (!['agree', 'disagree'].includes(userValue)) {console.log('Please select either \"Agree\" or \"Disagree\".');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 7,
+                "question": "Select all the social media platforms you use.",
+                "type": "checkbox",
+                "options": [
+                    {
+                        "option_id": 1,
+                        "value": "a",
+                        "name": "Facebook"
+                    },
+                    {
+                        "option_id": 2,
+                        "value": "b",
+                        "name": "Twitter"
+                    },
+                    {
+                        "option_id": 3,
+                        "value": "c",
+                        "name": "Instagram"
+                    },
+                    {
+                        "option_id": 4,
+                        "value": "d",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "script": "const validPlatforms = ['a', 'b', 'c', 'd']; if (!userValue.every(platform => validPlatforms.includes(platform))) {console.log('Please select valid social media platforms.');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 8,
+                "question": "What is your date of birth?",
+                "type": "text",
+                "script": "const dobDate = new Date(userValue); if (isNaN(dobDate.getTime())) {console.log('Please enter a valid date of birth.');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 9,
+                "question": "On a scale of 0 to 10, how likely are you to recommend our product to a friend or colleague?",
+                "type": "text",
+                "script": "if (isNaN(userValue) || userValue < 0 || userValue > 10) {console.log('Please enter a valid number between 0 and 10.');} else {console.log('Thank you for your response.');}"
+            }
+        ]
+    },
+    {
+        "set": 2,
+        "title": "Survey 2",
+        "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
+        "questions": [
+            {
+                "id": 10,
+                "question": "Please provide detailed feedback on your overall experience with our product. What features do you like the most and least?",
+                "type": "textarea",
+                "script": "if (userValue.trim() === '') {console.log('Please provide detailed feedback.');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 11,
+                "question": "Which of the following best describes your role?",
+                "type": "radio",
+                "options": [
+                    {
+                        "option_id": 1,
+                        "value": "a",
+                        "name": "Developer"
+                    },
+                    {
+                        "option_id": 2,
+                        "value": "b",
+                        "name": "Designer"
+                    },
+                    {
+                        "option_id": 3,
+                        "value": "c",
+                        "name": "Manager"
+                    },
+                    {
+                        "option_id": 4,
+                        "value": "d",
+                        "name": "Other"
+                    }
+                ],
+                "script": "if (!['a', 'b', 'c', 'd'].includes(userValue)) {console.log('Please select a valid option (a, b, c, or d).');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 12,
+                "question": "How did you hear about our product?",
+                "type": "checkbox",
+                "options": [
+                    {
+                        "option_id": 1,
+                        "value": "a",
+                        "name": "Online Advertisement"
+                    },
+                    {
+                        "option_id": 2,
+                        "value": "b",
+                        "name": "Word of Mouth"
+                    },
+                    {
+                        "option_id": 3,
+                        "value": "c",
+                        "name": "Social Media"
+                    },
+                    {
+                        "option_id": 4,
+                        "value": "d",
+                        "name": "Conference/Event"
+                    }
+                ],
+                "script": "const validSources = ['a', 'b', 'c', 'd']; if (!userValue.every(source => validSources.includes(source))) {console.log('Please select valid sources.');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 13,
+                "question": "Please rate the ease of use of our product on a scale of 1 to 10.",
+                "type": "text",
+                "script": "if (isNaN(userValue) || userValue < 1 || userValue > 10) {console.log('Please enter a valid number between 1 and 10.');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 14,
+                "question": "If you could add one feature to our product, what would it be?",
+                "type": "text",
+                "script": "if (userValue.trim() === '') {console.log('Please provide your suggestion for an additional feature.');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 15,
+                "question": "Select the industry that best represents your organization.",
+                "type": "dropdown",
+                "options": [
+                    {
+                        "option_id": 1,
+                        "value": "Select",
+                        "name": "Select"
+                    },
+                    {
+                        "option_id": 2,
+                        "value": "IT",
+                        "name": "Information Technology"
+                    },
+                    {
+                        "option_id": 3,
+                        "value": "Health",
+                        "name": "Healthcare"
+                    },
+                    {
+                        "option_id": 4,
+                        "value": "Finance",
+                        "name": "Finance"
+                    }
+                ],
+                "script": "if (userValue === 'Select') {console.log('Please select a valid industry.');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 16,
+                "question": "How often do you use our product in a typical week?",
+                "type": "radio",
+                "options": [
+                    {
+                        "option_id": 1,
+                        "value": "a",
+                        "name": "Daily"
+                    },
+                    {
+                        "option_id": 2,
+                        "value": "b",
+                        "name": "Weekly"
+                    },
+                    {
+                        "option_id": 3,
+                        "value": "c",
+                        "name": "Monthly"
+                    },
+                    {
+                        "option_id": 4,
+                        "value": "d",
+                        "name": "Rarely"
+                    }
+                ],
+                "script": "if (!['a', 'b', 'c', 'd'].includes(userValue)) {console.log('Please select a valid option (a, b, c, or d).');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 17,
+                "question": "What challenges have you faced while using our product, if any?",
+                "type": "textarea",
+                "script": "if (userValue.trim() === '') {console.log('Please provide details about any challenges you have faced.');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 18,
+                "question": "Would you be interested in participating in beta testing for upcoming features?",
+                "type": "radio",
+                "options": [
+                    {
+                        "option_id": 1,
+                        "value": "a",
+                        "name": "Yes"
+                    },
+                    {
+                        "option_id": 2,
+                        "value": "b",
+                        "name": "No"
+                    }
+                ],
+                "script": "if (!['a', 'b'].includes(userValue)) {console.log('Please select a valid option (a or b).');} else {console.log('Thank you for your response.');}"
+            },
+            {
+                "id": 19,
+                "question": "What is the primary goal you aim to achieve using our product?",
+                "type": "text",
+                "script": "if (userValue.trim() === '') {console.log('Please provide details about your primary goal.');} else {console.log('Thank you for your response.');}"
+            }
+        ]
+    }
+]
